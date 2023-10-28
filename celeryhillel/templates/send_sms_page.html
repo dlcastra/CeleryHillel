@@ -1,0 +1,15 @@
+<!-- sms_app/templates/sms_app/send_sms.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Отправка SMS</title>
+</head>
+<body>
+    <h1>Отправка SMS</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ page }}
+        <input type="submit" value="Відправити SMS">
+    </form>
+</body>
+</html>
