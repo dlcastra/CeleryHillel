@@ -40,11 +40,3 @@ class SmsVerificationForm(forms.ModelForm):
             parsed, phonenumbers.PhoneNumberFormat.INTERNATIONAL
         )
         return formatted_phone
-
-    # def clean_verification_message(self):
-    #     verification_message = self.cleaned_data["verification_message"]
-    #     if len(verification_message) > 50:
-    #         raise forms.ValidationError(
-    #             "The message is too long, the maximum length is 50 characters/"
-    #             "Повідомлення занадто довге, максимальна довжина - 50 символів"
-    #         )

@@ -8,12 +8,7 @@ client = Client(settings.TWILIO_ACCOUNT_SID, settings.TWILIO_AUTH_TOKEN)
 @shared_task
 def send_sms(receiver, message):
     print("Hello from server")
-    message = client.messages \
-        .create(
-        from_='+13344781120',
-        body=message,
-        to=receiver
-    )
+    message = client.messages.create(from_="+13344781120", body=message, to=receiver)
 
     print(message.sid)
     return message.sid
