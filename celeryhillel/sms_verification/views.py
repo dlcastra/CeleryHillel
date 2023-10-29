@@ -19,3 +19,8 @@ def send_sms_view(request):
 
 def success(request):
     return render(request, "success_page.html")
+
+
+def test_send(request):
+    send_sms.delay("+48733375448", "Try it")
+    return render(request, "main.html")
